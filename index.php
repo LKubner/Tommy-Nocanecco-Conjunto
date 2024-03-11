@@ -10,8 +10,8 @@
     <h1>Lista de compras</h1>
     <h2>Menu</h2>
     <ul>
-    <li><a href="formcad.html">Inserir produto</a> </li> <br>
-    <li><a href="formedit.html">Atualizar produto</a> </li> <br>
+    <li><a href="formcad.php">Inserir produto</a> </li> <br>
+    <li><a href="formedit.php">Atualizar produto</a> </li> <br>
     <li><a href="listar_produto.php">Listar produto</a> </li> <br>
     <li><a href="formexcluir.html">Excluir produto</a> </li> <br>
     </ul>

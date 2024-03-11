@@ -27,7 +27,7 @@ $dados = mysqli_fetch_assoc($resultado)
         <input type="text" value="<?php echo $dados['id_produto']?>" name="id_produto" /> <br>
 
         nome do produto
-        <input type="text" value="<?php echo $dados['pnome]?>" name="nome" va/> <br>
+        <input type="text" value="<?php echo $dados['nome']?>" name="nome" /> <br>
 
         Quantidade:
         <input type="text" value="<?php echo $dados['qtd']?>" name="qtd"/> <br> <br>

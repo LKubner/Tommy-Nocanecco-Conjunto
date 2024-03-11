@@ -1,14 +1,14 @@
 <?php
 
-$nome_produto = $_POST['nome']; 
-$quant = $_POST['quant']; 
+$nome = $_POST['nome']; 
+$qtd = $_POST['qtd']; 
 
 $servername="localhost";
 $username="root";
 $password="";
-$db_name="produto";
+$db_name="produtos";
 
 $connect = mysqli_connect($servername, $username, $password, $db_name);
 
-$sql = "INSERT INTO produtos(produto, quantidade) VALUES ('$nome_produto', $quant)";
+$sql = "INSERT INTO produto(nome, qtd) VALUES ('$nome', $qtd)";
 $query_compras = mysqli_query($connect,$sql);

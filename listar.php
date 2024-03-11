@@ -11,23 +11,22 @@
 </body>
 </html>
 <?php
-require_once "conexao.php";
-$conexao = conectar();
+require_once "conecta.php";
 $sql = "SELECT * FROM produto";
-$result = mysqli_query($conexao, $sql);
+$result = mysqli_query($connect, $sql);
 if ($result) {
-    $protudox = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $produtox = mysqli_fetch_all($result, MYSQLI_ASSOC);
 } else {
-    echo mysqli_errno($conexao) . ": " . mysqli_error($conexao);
+    echo mysqli_errno($connect) . ": " . mysqli_error($connect);
 }
 foreach ($produtox as $produto) {
-    echo "<tr><td>" . $produto['id_produto'] . "</td>";
+    echo "<tr><td>" . $produto['id_produto']  . "</td>";
     echo "<td>" . $produto['nome'] . "</td>";
     echo "<td>" . $produto['qtd'] . "</td>";
-    echo '<td><a href="form-alterar.php?id_produto=' .
-        $produto['id_produto'] . '">Alterar</td>';
+    echo '<td><a href="formedit.php?id_produto=' .
+        $produto['id_produto'] . '">Alterar</td>  ';
     echo '<td><a href="excluir.php?id_produto=' .
-        $usuario['id_produto'] . '">Excluir</td>';
+        $produto['id_produto'] . '">Excluir</td>';
     echo '<br>';}
         
             ?>

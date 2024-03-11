@@ -3,7 +3,7 @@ include_once 'conecta.php';
 
 $id = $_GET['id_produto'];
 
-$sql = "SELECT * FROM lista WHERE id_produto=$id_produto";
+$sql = "SELECT * FROM produto WHERE id_produto=$id";
 
 $resultado = mysqli_query($connect, $sql);
 

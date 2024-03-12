@@ -1,13 +1,8 @@
 <?php
-require_once "conexao.php";
-$conexao = conectar();
+require_once "conecta.php";
 
-$id_usuario = $_GET['id_usuario'];
 
-$sql = "DELETE FROM produto WHERE id_produto=$id_usuario";
-$result = mysqli_query($conexao, $sql);
-if ($result) {
-    header("Location: index.php");
-} else {
-    echo mysqli_errno($conexao) . ": " . mysqli_error($conexao);
-}
+$id_produto = $_GET['id_produto'];
+
+$sql = "DELETE FROM produto WHERE id_produto=$id_produto";
+$result = mysqli_query($connect, $sql);

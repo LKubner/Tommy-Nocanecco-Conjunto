@@ -24,9 +24,12 @@ foreach ($produtox as $produto) {
     echo "<td>" . $produto['nome'] . "</td>";
     echo "<td>" . $produto['qtd'] . "</td>";
     echo '<td><a href="formedit.php?id_produto=' .
-        $produto['id_produto'] . '">Alterar</td>  ';
+        $produto['id_produto'] . '">Alterar</a></td>  ';
+
     echo '<td><a href="excluir.php?id_produto=' .
-        $produto['id_produto'] . '">Excluir</td>';
-    echo '<br>';}
+        $produto['id_produto'] . '">Excluir</a></td>';
+    echo '<br>';
+    echo'<br>';}
+    
         
             ?>

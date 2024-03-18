@@ -23,14 +23,14 @@ $dados = mysqli_fetch_assoc($resultado)
 
     <form action="editar.php" method="get">
 
-        Informe o id do produto:
-        <input type="text" value="<?php echo $dados['id_produto']?>" name="id_produto" /> <br>
+        Informe o id do produto:<?php echo $dados['id_produto']?>
+        <input type="hidden" value="<?php echo $dados['id_produto']?>" name="id_produto" /> <br>
 
         nome do produto
         <input type="text" value="<?php echo $dados['nome']?>" name="nome" /> <br>
 
         Quantidade:
-        <input type="text" value="<?php echo $dados['qtd']?>" name="qtd"/> <br> <br>
+        <input type="number" value="<?php echo $dados['qtd']?>" name="qtd"/> <br> <br>
 
         <input type="submit" value="Editar" />
     </form>
